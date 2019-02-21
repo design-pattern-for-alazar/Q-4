@@ -9,7 +9,6 @@
 DocumentFactory* DocumentFactory::_instance;
 
 DocumentFactory* DocumentFactory::instance(std::string filename) {
-  if (_instance != nullptr) delete _instance;
 
   if (_instance == nullptr) {
     std::regex ex(".*?\\.(?:txt|c|cpp|h|hpp|py|java)$", std::regex::icase);
